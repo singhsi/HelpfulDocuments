@@ -14,4 +14,4 @@ podman stop app-liberty-server
 podman ps
 
 ### Stop the container
-podman stop <container-id>
+podman stop container-id
