@@ -2,7 +2,9 @@
 
 A beginner-friendly introduction to Liberty application servers. Covers what Liberty is, how it compares to traditional WebSphere, and best practices for development and containerisation.
 
-> **See also:** [commands.md](commands.md)
+> **See also:**
+> - [commands.md](commands.md) — Quick command-line reference
+> - [containerization.md](containerization.md) — Production-grade Docker/Podman containerization & Kubernetes deployment
 
 ---
 
