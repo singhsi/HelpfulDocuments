@@ -38,7 +38,10 @@ WebSphere Liberty and Open Liberty application servers.
 
 ---
 
-### [`tomcat/`](tomcat/)
-| File | Description |
+### [`java/`](java/)
+Java application servers, servlet containers, and middleware.
+
+| Subfolder | Description |
 |---|---|
-| [Apache-Tomcat-Installation.docx](tomcat/Apache-Tomcat-Installation.docx) | Tomcat installation guide |
+| [`java/jboss/`](java/jboss/) | JBoss EAP & WildFly installation, multi-monolith standalone setup, IDE configuration, and performance tuning |
+| [`java/tomcat/`](java/tomcat/) | Apache Tomcat installation guide and notes |
