@@ -16,6 +16,17 @@ JBoss Enterprise Application Platform (EAP) and WildFly Application Server.
 
 ---
 
+### [`java/liberty/`](liberty/)
+WebSphere Liberty and Open Liberty application servers.
+
+| File | Description |
+|---|---|
+| [README.md](liberty/README.md) | What Liberty is, WAS vs Liberty, `server.xml`, running in containers, best practices, migration guide |
+| [containerization.md](liberty/containerization.md) | Production-grade containerization with Docker/Podman, `configure.sh`, JVM tuning, and Kubernetes/OpenShift deployment |
+| [commands.md](liberty/commands.md) | Quick-lookup reference for Liberty server commands and useful links |
+
+---
+
 ### [`java/tomcat/`](tomcat/)
 Apache Tomcat servlet container.
 

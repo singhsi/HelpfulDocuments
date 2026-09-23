@@ -28,21 +28,11 @@ Container basics with Podman (compatible with Docker).
 
 ---
 
-### [`liberty/`](liberty/)
-WebSphere Liberty and Open Liberty application servers.
-
-| File | Description |
-|---|---|
-| [README.md](liberty/README.md) | What Liberty is, WAS vs Liberty, `server.xml`, running in containers, best practices, migration guide |
-| [containerization.md](liberty/containerization.md) | Production-grade containerization with Docker/Podman, `configure.sh`, JVM tuning, and Kubernetes/OpenShift deployment |
-| [commands.md](liberty/commands.md) | Quick-lookup reference for Liberty server commands and useful links |
-
----
-
 ### [`java/`](java/)
 Java application servers, servlet containers, and middleware.
 
 | Subfolder | Description |
 |---|---|
 | [`java/jboss/`](java/jboss/) | JBoss EAP & WildFly installation, multi-monolith standalone setup, IDE configuration, and performance tuning |
-| [`java/tomcat/`](java/tomcat/) | Apache Tomcat installation guide and notes |
+| [`java/liberty/`](java/liberty/) | WebSphere Liberty & Open Liberty guide, production containerization, and commands |
+| [`java/tomcat/`](java/tomcat/) | Apache Tomcat developer guide, Linux installation, Dev/Test/Prod environments, and commands |
