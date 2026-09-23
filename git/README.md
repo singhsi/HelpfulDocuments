@@ -2,7 +2,7 @@
 
 A practical reference for everyday Git workflows. Start here, then explore the other files in this folder.
 
-> **See also:** [commands.md](commands.md) · [stash.md](stash.md)
+> **See also:** [commands.md](commands.md) · [stash.md](stash.md) · [undoing.md](undoing.md)
 
 ---
 
@@ -12,7 +12,7 @@ A practical reference for everyday Git workflows. Start here, then explore the o
 - [Commit Best Practices](#commit-best-practices)
 - [Branch Naming](#branch-naming)
 - [Working with Remotes](#working-with-remotes)
-- [Undoing Things](#undoing-things)
+- [Undoing Things](undoing.md)
 - [Useful Log Tricks](#useful-log-tricks)
 - [.gitignore Tips](#gitignore-tips)
 
