@@ -1,7 +1,12 @@
 # Git Stash
 
-#### stash current changes
-`git stash save "A message about the changes you are saving"`
+#### stash current changes (recommended)
+`git stash push -m "A message about the changes you are saving"`
+
+> **Note:** `git stash save` was **deprecated in Git 2.16.0** (released 2018) in favor of `git stash push -m "message"`. While `git stash save` still works in most Git versions for backwards compatibility, `git stash push` is the standard modern syntax because it supports pathspec filtering (stashing specific files) and flags like `-u`/`--include-untracked`.
+
+#### quick stash without a message
+`git stash`
 
 #### see the stash list
 `git stash list`
@@ -19,7 +24,7 @@
 Use this when you have uncommitted changes and want to move them onto a fresh branch.
 `git stash apply` keeps the stash intact so you can re-apply it to multiple branches if needed.
 ```
-git stash save "my changes"        # stash current changes
+git stash push -m "my changes"     # stash current changes
 git checkout -b <new-branch>       # create and switch to a new branch
 git stash apply                    # apply the stash — stash is kept
 ```
