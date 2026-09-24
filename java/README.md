@@ -1,10 +1,21 @@
-# Java Application Servers & Middleware
+# Java Ecosystem, Runtimes & Application Servers
 
-Guides and references for enterprise Java runtimes and application servers.
+Guides and references for core Java Standard Edition (Java SE), enterprise Java runtimes, servlet containers, and application servers.
 
 ---
 
 ## Contents
+
+### [`java/java-se/`](java-se/)
+Java Standard Edition (Java SE) fundamentals, CLI tools, and runtime execution from first principles without IDEs or build tools.
+
+| File | Description |
+|---|---|
+| [README.md](java-se/README.md) | Pure Java SE guide: execution model (JDK/JRE/JVM), CLI tools (`java`, `javac`, `javaw`, `jar`, `javap`, `jdb`, `jcmd`), classpath deep dive, and setting classpaths in enterprise software |
+| [performance.md](java-se/performance.md) | Java performance tuning, memory architecture (Heap, Metaspace, Stacks), GC algorithms (G1, ZGC, Parallel), production JVM presets, and bottleneck diagnosis |
+| [commands.md](java-se/commands.md) | Quick-lookup CLI reference for compilation, execution, JAR creation, bytecode disassembly, and diagnostics |
+
+---
 
 ### [`java/jboss/`](jboss/)
 JBoss Enterprise Application Platform (EAP) and WildFly Application Server.
