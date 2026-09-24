@@ -8,6 +8,15 @@
 #### quick stash without a message
 `git stash`
 
+#### stash specific file(s) by name
+`git stash push path/to/file.ext`
+
+#### stash specific file(s) with a message
+`git stash push -m "stashing specific files" path/to/file1.ext path/to/file2.ext`
+
+#### stash specific files including untracked files
+`git stash push -u -m "stashing untracked and tracked files" path/to/file1.ext newfile.ext`
+
 #### see the stash list
 `git stash list`
 
