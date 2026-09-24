@@ -33,6 +33,18 @@ Java application servers, servlet containers, and middleware.
 
 | Subfolder | Description |
 |---|---|
+| [`java/java-se/`](java/java-se/) | Java SE core execution model, CLI binaries (`java`, `javac`, `javaw`, `jar`, `javap`), and classpath management |
 | [`java/jboss/`](java/jboss/) | JBoss EAP & WildFly installation, multi-monolith standalone setup, IDE configuration, and performance tuning |
 | [`java/liberty/`](java/liberty/) | WebSphere Liberty & Open Liberty guide, production containerization, and commands |
 | [`java/tomcat/`](java/tomcat/) | Apache Tomcat developer guide, Linux installation, Dev/Test/Prod environments, and commands |
+
+---
+
+### [`build/`](build/)
+Build tools and best practices for multi-module enterprise projects with shared common libraries/frameworks.
+
+| Subfolder | Description |
+|---|---|
+| [`build/maven/`](build/maven/) | Maven multi-module architecture, parent POM vs BOM, dependency convergence, and reactor commands |
+| [`build/gradle/`](build/gradle/) | Gradle multi-project builds with Kotlin DSL, version catalogs (`libs.versions.toml`), and convention plugins |
+| [`build/ant/`](build/ant/) | Modular Ant builds with Apache Ivy dependency management, shared macro targets, and modernization paths |
