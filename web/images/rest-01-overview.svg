@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">A REST API: one contract, many clients</text>
+
+  <!-- Clients -->
+  <g font-size="14" font-weight="700" text-anchor="middle" fill="#1e3a8a">
+    <rect x="30" y="60"  width="170" height="54" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="115" y="92">Web app (React…)</text>
+    <rect x="30" y="140" width="170" height="54" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="115" y="172">Mobile app</text>
+    <rect x="30" y="220" width="170" height="54" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="115" y="252">Another service</text>
+  </g>
+
+  <!-- API -->
+  <rect x="350" y="60" width="240" height="214" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="470" y="90" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">REST API</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#14532d">
+    <text x="370" y="125">GET<tspan x="424.6">/users</tspan></text>
+    <text x="370" y="148">POST<tspan x="424.6">/users</tspan></text>
+    <text x="370" y="171">GET<tspan x="424.6">/users/42</tspan></text>
+    <text x="370" y="194">PUT<tspan x="424.6">/users/42</tspan></text>
+    <text x="370" y="217">DELETE /users/42</text>
+    <text x="370" y="240">GET<tspan x="424.6">/users/42/orders</tspan></text>
+  </g>
+  <text x="470" y="263" text-anchor="middle" font-size="12" fill="#15803d">the public contract</text>
+
+  <!-- DB -->
+  <rect x="700" y="100" width="170" height="54" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="785" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">Database</text>
+  <rect x="700" y="180" width="170" height="54" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="785" y="212" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">Other systems</text>
+
+  <!-- Arrows -->
+  <line x1="202" y1="87"  x2="347" y2="130" stroke="#334155" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <line x1="202" y1="167" x2="347" y2="167" stroke="#334155" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <line x1="202" y1="247" x2="347" y2="205" stroke="#334155" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="275" y="157" text-anchor="middle" font-size="12" fill="#334155">HTTP + JSON</text>
+
+  <line x1="592" y1="140" x2="697" y2="127" stroke="#334155" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <line x1="592" y1="195" x2="697" y2="207" stroke="#334155" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="785" y="265" text-anchor="middle" font-size="12" fill="#92400e">hidden from clients</text>
+
+  <text x="450" y="315" text-anchor="middle" font-size="13" fill="#475569">Clients only know the URLs, methods and JSON shapes. The server can change its internals freely as long as the contract holds.</text>
+</svg>

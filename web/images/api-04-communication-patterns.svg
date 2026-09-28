@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Who talks first, and how often?</text>
+
+  <!-- ========== Panel 1: request/response ========== -->
+  <rect x="20" y="50" width="280" height="235" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">1. Request / response</text>
+  <rect x="40"  y="88" width="80" height="28" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="80"  y="107" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Client</text>
+  <rect x="200" y="88" width="80" height="28" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="240" y="107" text-anchor="middle" font-size="12" font-weight="700" fill="#14532d">Server</text>
+  <line x1="80"  y1="116" x2="80"  y2="235" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="240" y1="116" x2="240" y2="235" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="82" y1="145" x2="236" y2="145" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="160" y="139" text-anchor="middle" font-size="11" fill="#334155">request</text>
+  <line x1="238" y1="185" x2="84" y2="185" stroke="#334155" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <text x="160" y="179" text-anchor="middle" font-size="11" fill="#334155">response</text>
+  <text x="160" y="217" text-anchor="middle" font-size="11" fill="#64748b">client waits, then it's over</text>
+  <text x="160" y="266" text-anchor="middle" font-size="12" fill="#1e40af">REST · SOAP · GraphQL · gRPC</text>
+
+  <!-- ========== Panel 2: server stream (SSE) ========== -->
+  <rect x="310" y="50" width="280" height="235" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">2. One-way stream</text>
+  <rect x="330" y="88" width="80" height="28" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="370" y="107" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Browser</text>
+  <rect x="490" y="88" width="80" height="28" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="530" y="107" text-anchor="middle" font-size="12" font-weight="700" fill="#14532d">Server</text>
+  <line x1="370" y1="116" x2="370" y2="245" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="530" y1="116" x2="530" y2="245" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="372" y1="140" x2="526" y2="140" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="134" text-anchor="middle" font-size="11" fill="#334155">subscribe once</text>
+  <line x1="528" y1="170" x2="374" y2="170" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="528" y1="195" x2="374" y2="195" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="528" y1="220" x2="374" y2="220" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="164" text-anchor="middle" font-size="11" fill="#166534">event</text>
+  <text x="450" y="189" text-anchor="middle" font-size="11" fill="#166534">event</text>
+  <text x="450" y="214" text-anchor="middle" font-size="11" fill="#166534">event …</text>
+  <text x="450" y="266" text-anchor="middle" font-size="12" fill="#166534">Server-Sent Events · gRPC streaming</text>
+
+  <!-- ========== Panel 3: two-way (WebSocket) ========== -->
+  <rect x="600" y="50" width="280" height="235" rx="10" fill="#f8fafc" stroke="#0d9488" stroke-width="2"/>
+  <text x="740" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#134e4a">3. Two-way, always open</text>
+  <rect x="620" y="88" width="80" height="28" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="660" y="107" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Client</text>
+  <rect x="780" y="88" width="80" height="28" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="820" y="107" text-anchor="middle" font-size="12" font-weight="700" fill="#14532d">Server</text>
+  <line x1="660" y1="116" x2="660" y2="245" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="820" y1="116" x2="820" y2="245" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="662" y1="140" x2="816" y2="140" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="740" y="134" text-anchor="middle" font-size="11" fill="#334155">open (HTTP Upgrade)</text>
+  <line x1="662" y1="170" x2="816" y2="170" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="818" y1="195" x2="664" y2="195" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="818" y1="210" x2="664" y2="210" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="662" y1="230" x2="816" y2="230" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="740" y="164" text-anchor="middle" font-size="11" fill="#115e59">any time, either way</text>
+  <text x="740" y="266" text-anchor="middle" font-size="12" fill="#115e59">WebSockets · gRPC bidirectional</text>
+
+  <!-- ========== Panel 4: webhook ========== -->
+  <rect x="20" y="305" width="420" height="235" rx="10" fill="#f8fafc" stroke="#db2777" stroke-width="2"/>
+  <text x="230" y="330" text-anchor="middle" font-size="14" font-weight="700" fill="#831843">4. Webhook: they call you</text>
+  <rect x="45"  y="345" width="140" height="30" rx="6" fill="#fce7f3" stroke="#db2777"/>
+  <text x="115" y="365" text-anchor="middle" font-size="12" font-weight="700" fill="#831843">Provider (e.g. Stripe)</text>
+  <rect x="275" y="345" width="140" height="30" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="345" y="365" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Your server</text>
+  <line x1="115" y1="375" x2="115" y2="480" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <line x1="345" y1="375" x2="345" y2="480" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="115" cy="400" r="6" fill="#db2777"/>
+  <text x="105" y="404" text-anchor="end" font-size="11" fill="#9d174d">event!</text>
+  <line x1="117" y1="410" x2="341" y2="410" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="230" y="404" text-anchor="middle" font-size="11" fill="#334155">POST /webhooks/payments</text>
+  <line x1="343" y1="450" x2="119" y2="450" stroke="#334155" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <text x="230" y="444" text-anchor="middle" font-size="11" fill="#334155">200 OK (quickly)</text>
+  <text x="230" y="505" text-anchor="middle" font-size="12" fill="#9d174d">Roles flip: you register a URL, they call it.</text>
+  <text x="230" y="523" text-anchor="middle" font-size="12" fill="#9d174d">No polling needed.</text>
+
+  <!-- ========== Panel 5: messaging ========== -->
+  <rect x="460" y="305" width="420" height="235" rx="10" fill="#f8fafc" stroke="#d97706" stroke-width="2"/>
+  <text x="670" y="330" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">5. Messaging: through a broker</text>
+  <rect x="480" y="400" width="100" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="530" y="427" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Producer</text>
+  <rect x="620" y="390" width="110" height="64" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="675" y="416" text-anchor="middle" font-size="12" font-weight="700" fill="#78350f">Broker</text>
+  <text x="675" y="434" text-anchor="middle" font-size="11" fill="#92400e">queue / topic</text>
+  <g font-size="12" font-weight="700" fill="#14532d" text-anchor="middle">
+    <rect x="770" y="350" width="95" height="34" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="817" y="372">Consumer A</text>
+    <rect x="770" y="405" width="95" height="34" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="817" y="427">Consumer B</text>
+    <rect x="770" y="460" width="95" height="34" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="817" y="482">Consumer C</text>
+  </g>
+  <line x1="582" y1="422" x2="616" y2="422" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="732" y1="410" x2="766" y2="370" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="732" y1="422" x2="766" y2="422" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="732" y1="434" x2="766" y2="474" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="530" y="470" text-anchor="middle" font-size="11" fill="#64748b">publishes and</text>
+  <text x="530" y="485" text-anchor="middle" font-size="11" fill="#64748b">moves on</text>
+  <text x="670" y="523" text-anchor="middle" font-size="12" fill="#92400e">Nobody waits. Broker stores messages until consumers are ready.</text>
+</svg>

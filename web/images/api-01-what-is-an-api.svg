@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">An API is a contract between two pieces of software</text>
+
+  <!-- Caller -->
+  <rect x="30" y="70" width="180" height="120" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">Your code</text>
+  <text x="120" y="142" text-anchor="middle" font-size="12" fill="#1e3a8a">(the caller)</text>
+
+  <!-- API contract -->
+  <rect x="300" y="60" width="300" height="140" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="88" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">The API (contract)</text>
+  <g font-size="13" fill="#14532d">
+    <text x="320" y="118">✓ What you can ask for</text>
+    <text x="320" y="142">✓ How to ask (format, inputs)</text>
+    <text x="320" y="166">✓ What you get back (outputs, errors)</text>
+  </g>
+
+  <!-- System -->
+  <rect x="690" y="60" width="180" height="140" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="780" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">The system</text>
+  <text x="780" y="125" text-anchor="middle" font-size="12" fill="#64748b">database, logic,</text>
+  <text x="780" y="142" text-anchor="middle" font-size="12" fill="#64748b">other services…</text>
+  <text x="780" y="170" text-anchor="middle" font-size="12" font-style="italic" fill="#64748b">hidden from you</text>
+
+  <!-- arrows -->
+  <line x1="212" y1="115" x2="296" y2="115" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="254" y="107" text-anchor="middle" font-size="12" fill="#334155">request</text>
+  <line x1="296" y1="150" x2="212" y2="150" stroke="#334155" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <text x="254" y="170" text-anchor="middle" font-size="12" fill="#334155">response</text>
+  <line x1="602" y1="115" x2="686" y2="115" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="686" y1="150" x2="602" y2="150" stroke="#334155" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+
+  <!-- Kinds -->
+  <text x="450" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">APIs are everywhere, not just on the web</text>
+  <rect x="30" y="262" width="260" height="90" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="160" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">Library API</text>
+  <text x="160" y="314" text-anchor="middle" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#78350f">list.add("x")</text>
+  <text x="160" y="336" text-anchor="middle" font-size="12" fill="#92400e">call code in the same process</text>
+
+  <rect x="320" y="262" width="260" height="90" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">Operating system API</text>
+  <text x="450" y="314" text-anchor="middle" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#4c1d95">Files.readString(path)</text>
+  <text x="450" y="336" text-anchor="middle" font-size="12" fill="#5b21b6">ask the OS for files, network…</text>
+
+  <rect x="610" y="262" width="260" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="740" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Web API</text>
+  <text x="740" y="314" text-anchor="middle" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#14532d">GET /users/42</text>
+  <text x="740" y="336" text-anchor="middle" font-size="12" fill="#15803d">call another machine over a network</text>
+</svg>

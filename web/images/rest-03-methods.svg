@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">HTTP methods = CRUD operations on a resource</text>
+
+  <!-- header -->
+  <g font-size="13" font-weight="700" fill="#475569">
+    <text x="40"  y="70">Method</text>
+    <text x="150" y="70">Example</text>
+    <text x="370" y="70">What it does</text>
+    <text x="620" y="70">Success</text>
+    <text x="760" y="70">Idempotent?</text>
+  </g>
+  <line x1="30" y1="80" x2="870" y2="80" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <g font-size="13">
+    <!-- GET list -->
+    <rect x="40" y="92" width="80" height="28" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="80" y="111" text-anchor="middle" font-weight="700" fill="#1e3a8a">GET</text>
+    <text x="150" y="111" font-family="SFMono-Regular, Menlo, Consolas, monospace" fill="#0f172a">/users</text>
+    <text x="370" y="111" fill="#334155">Read — list users</text>
+    <text x="620" y="111" fill="#15803d">200 OK</text>
+    <text x="760" y="111" fill="#15803d">Yes (and safe)</text>
+
+    <!-- GET one -->
+    <rect x="40" y="134" width="80" height="28" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="80" y="153" text-anchor="middle" font-weight="700" fill="#1e3a8a">GET</text>
+    <text x="150" y="153" font-family="SFMono-Regular, Menlo, Consolas, monospace" fill="#0f172a">/users/42</text>
+    <text x="370" y="153" fill="#334155">Read — one user</text>
+    <text x="620" y="153" fill="#15803d">200 OK</text>
+    <text x="760" y="153" fill="#15803d">Yes (and safe)</text>
+
+    <!-- POST -->
+    <rect x="40" y="176" width="80" height="28" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="80" y="195" text-anchor="middle" font-weight="700" fill="#14532d">POST</text>
+    <text x="150" y="195" font-family="SFMono-Regular, Menlo, Consolas, monospace" fill="#0f172a">/users</text>
+    <text x="370" y="195" fill="#334155">Create — server assigns id</text>
+    <text x="620" y="195" fill="#15803d">201 Created</text>
+    <text x="760" y="195" fill="#b91c1c">No</text>
+
+    <!-- PUT -->
+    <rect x="40" y="218" width="80" height="28" rx="6" fill="#fef3c7" stroke="#d97706"/>
+    <text x="80" y="237" text-anchor="middle" font-weight="700" fill="#78350f">PUT</text>
+    <text x="150" y="237" font-family="SFMono-Regular, Menlo, Consolas, monospace" fill="#0f172a">/users/42</text>
+    <text x="370" y="237" fill="#334155">Update — replace whole user</text>
+    <text x="620" y="237" fill="#15803d">200 / 204</text>
+    <text x="760" y="237" fill="#15803d">Yes</text>
+
+    <!-- PATCH -->
+    <rect x="40" y="260" width="80" height="28" rx="6" fill="#ede9fe" stroke="#7c3aed"/>
+    <text x="80" y="279" text-anchor="middle" font-weight="700" fill="#4c1d95">PATCH</text>
+    <text x="150" y="279" font-family="SFMono-Regular, Menlo, Consolas, monospace" fill="#0f172a">/users/42</text>
+    <text x="370" y="279" fill="#334155">Update — change some fields</text>
+    <text x="620" y="279" fill="#15803d">200 / 204</text>
+    <text x="760" y="279" fill="#a16207">Not guaranteed</text>
+
+    <!-- DELETE -->
+    <rect x="40" y="302" width="80" height="28" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="80" y="321" text-anchor="middle" font-weight="700" fill="#7f1d1d">DELETE</text>
+    <text x="150" y="321" font-family="SFMono-Regular, Menlo, Consolas, monospace" fill="#0f172a">/users/42</text>
+    <text x="370" y="321" fill="#334155">Delete — remove user</text>
+    <text x="620" y="321" fill="#15803d">204 No Content</text>
+    <text x="760" y="321" fill="#15803d">Yes</text>
+  </g>
+
+  <text x="450" y="362" text-anchor="middle" font-size="12" fill="#64748b">Idempotent = sending the same request twice leaves the server in the same state as sending it once, so it is safe to retry.</text>
+</svg>

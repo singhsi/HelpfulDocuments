@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="200" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Anatomy of a URL</text>
+
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="20">
+    <rect x="30"  y="60" width="90"  height="40" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="75"  y="87" text-anchor="middle" fill="#1e3a8a">https</text>
+    <text x="137" y="87" text-anchor="middle" fill="#64748b">://</text>
+    <rect x="155" y="60" width="200" height="40" rx="6" fill="#fef3c7" stroke="#d97706"/>
+    <text x="255" y="87" text-anchor="middle" fill="#78350f">api.example.com</text>
+    <rect x="360" y="60" width="70"  height="40" rx="6" fill="#fce7f3" stroke="#db2777"/>
+    <text x="395" y="87" text-anchor="middle" fill="#831843">:443</text>
+    <rect x="435" y="60" width="150" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="510" y="87" text-anchor="middle" fill="#14532d">/users/42</text>
+    <rect x="590" y="60" width="170" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed"/>
+    <text x="675" y="87" text-anchor="middle" fill="#4c1d95">?sort=name</text>
+    <rect x="765" y="60" width="110" height="40" rx="6" fill="#f1f5f9" stroke="#64748b"/>
+    <text x="820" y="87" text-anchor="middle" fill="#334155">#bio</text>
+  </g>
+
+  <g font-size="13" text-anchor="middle">
+    <text x="75"  y="125" font-weight="700" fill="#1e3a8a">Scheme</text>
+    <text x="75"  y="143" fill="#475569">protocol</text>
+    <text x="255" y="125" font-weight="700" fill="#78350f">Host</text>
+    <text x="255" y="143" fill="#475569">looked up via DNS</text>
+    <text x="395" y="125" font-weight="700" fill="#831843">Port</text>
+    <text x="395" y="143" fill="#475569">optional</text>
+    <text x="395" y="161" fill="#475569">(443 / 80)</text>
+    <text x="510" y="125" font-weight="700" fill="#14532d">Path</text>
+    <text x="510" y="143" fill="#475569">which resource</text>
+    <text x="675" y="125" font-weight="700" fill="#4c1d95">Query string</text>
+    <text x="675" y="143" fill="#475569">key=value params</text>
+    <text x="820" y="125" font-weight="700" fill="#334155">Fragment</text>
+    <text x="820" y="143" fill="#475569">browser-only,</text>
+    <text x="820" y="161" fill="#475569">never sent</text>
+  </g>
+</svg>

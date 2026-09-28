@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">How the browser turns bytes into pixels</text>
+
+  <!-- Inputs -->
+  <rect x="20" y="60"  width="90" height="44" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="65" y="87"  text-anchor="middle" font-size="14" font-weight="700" fill="#7c2d12">HTML</text>
+  <rect x="20" y="180" width="90" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="65" y="207" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">CSS</text>
+
+  <rect x="150" y="60"  width="100" height="44" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="200" y="87"  text-anchor="middle" font-size="14" font-weight="700" fill="#7c2d12">DOM</text>
+  <rect x="150" y="180" width="100" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="207" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">CSSOM</text>
+
+  <line x1="112" y1="82"  x2="146" y2="82"  stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="112" y1="202" x2="146" y2="202" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="125" text-anchor="middle" font-size="11" fill="#64748b">tree of elements</text>
+  <text x="200" y="245" text-anchor="middle" font-size="11" fill="#64748b">tree of styles</text>
+
+  <!-- Pipeline -->
+  <g font-size="14" font-weight="700" text-anchor="middle" fill="#14532d">
+    <rect x="300" y="120" width="120" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="360" y="147">Render tree</text>
+    <rect x="460" y="120" width="100" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="510" y="147">Layout</text>
+    <rect x="600" y="120" width="100" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="650" y="147">Paint</text>
+    <rect x="740" y="120" width="140" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="810" y="147">Composite</text>
+  </g>
+  <line x1="252" y1="90"  x2="298" y2="130" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="252" y1="195" x2="298" y2="155" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="422" y1="142" x2="456" y2="142" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="562" y1="142" x2="596" y2="142" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="702" y1="142" x2="736" y2="142" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g font-size="11" fill="#64748b" text-anchor="middle">
+    <text x="360" y="185">visible nodes</text>
+    <text x="360" y="199">+ their styles</text>
+    <text x="510" y="185">sizes and</text>
+    <text x="510" y="199">positions</text>
+    <text x="650" y="185">fill in pixels</text>
+    <text x="810" y="185">layers → screen</text>
+  </g>
+
+  <!-- JS -->
+  <rect x="300" y="235" width="130" height="44" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="365" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">JavaScript</text>
+  <path d="M300,250 C270,250 270,110 252,95" fill="none" stroke="#ca8a04" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <path d="M300,262 C275,262 270,230 252,218" fill="none" stroke="#ca8a04" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="450" y="255" font-size="12" fill="#713f12">can change the DOM / CSSOM at any time,</text>
+  <text x="450" y="271" font-size="12" fill="#713f12">which re-runs layout and paint (keep that cheap)</text>
+</svg>

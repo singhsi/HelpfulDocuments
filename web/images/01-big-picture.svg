@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">What happens when you open https://example.com</text>
+
+  <!-- Browser -->
+  <rect x="40" y="150" width="190" height="100" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">Browser</text>
+  <text x="135" y="212" text-anchor="middle" font-size="13" fill="#1e3a8a">(the client)</text>
+
+  <!-- DNS -->
+  <rect x="355" y="55" width="190" height="70" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="85" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">DNS</text>
+  <text x="450" y="106" text-anchor="middle" font-size="13" fill="#78350f">the internet's phone book</text>
+
+  <!-- Server -->
+  <rect x="670" y="150" width="190" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="765" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">Web Server</text>
+  <text x="765" y="212" text-anchor="middle" font-size="13" fill="#14532d">93.184.216.34</text>
+
+  <!-- 1. DNS -->
+  <line x1="190" y1="148" x2="352" y2="80" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="352" y1="105" x2="215" y2="150" stroke="#334155" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <text x="60" y="90" font-size="13" fill="#0f172a"><tspan font-weight="700">1.</tspan> "Where is example.com?"</text>
+  <text x="60" y="110" font-size="13" fill="#475569">→ "93.184.216.34"</text>
+
+  <!-- 2,3,4 browser <-> server -->
+  <line x1="232" y1="170" x2="667" y2="170" stroke="#334155" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="450" y="163" text-anchor="middle" font-size="13" fill="#0f172a"><tspan font-weight="700">2.</tspan> Connect: TCP handshake + TLS (encryption)</text>
+
+  <line x1="232" y1="205" x2="667" y2="205" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="198" text-anchor="middle" font-size="13" fill="#0f172a"><tspan font-weight="700">3.</tspan> HTTP request: GET / </text>
+
+  <line x1="667" y1="240" x2="232" y2="240" stroke="#334155" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <text x="450" y="233" text-anchor="middle" font-size="13" fill="#0f172a"><tspan font-weight="700">4.</tspan> HTTP response: 200 OK + HTML</text>
+
+  <!-- 5. Render -->
+  <text x="135" y="285" text-anchor="middle" font-size="13" fill="#0f172a"><tspan font-weight="700">5.</tspan> Render the page,</text>
+  <text x="135" y="303" text-anchor="middle" font-size="13" fill="#0f172a">then fetch CSS / JS / images</text>
+  <text x="135" y="321" text-anchor="middle" font-size="13" fill="#475569">(repeat steps 3–4)</text>
+
+  <text x="765" y="285" text-anchor="middle" font-size="13" fill="#475569">Runs your code, talks to</text>
+  <text x="765" y="303" text-anchor="middle" font-size="13" fill="#475569">databases, builds the response</text>
+</svg>

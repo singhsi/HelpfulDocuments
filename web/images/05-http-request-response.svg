@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">An HTTP exchange is just structured text</text>
+
+  <!-- Request -->
+  <text x="30" y="65" font-size="15" font-weight="700" fill="#1e3a8a">Request  (client → server)</text>
+  <rect x="30" y="75" width="400" height="230" rx="8" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+    <rect x="31" y="76" width="398" height="34" fill="#dbeafe"/>
+    <text x="45" y="99" fill="#1e3a8a"><tspan font-weight="700">POST</tspan> /api/users HTTP/1.1</text>
+    <text x="45" y="135" fill="#334155">Host: api.example.com</text>
+    <text x="45" y="157" fill="#334155">Content-Type: application/json</text>
+    <text x="45" y="179" fill="#334155">Authorization: Bearer eyJ...</text>
+    <text x="45" y="201" fill="#334155">Accept: application/json</text>
+    <line x1="45" y1="215" x2="415" y2="215" stroke="#cbd5e1" stroke-dasharray="4 3"/>
+    <text x="45" y="243" fill="#0f172a">{ "name": "Ada",</text>
+    <text x="45" y="265" fill="#0f172a">  "email": "ada@example.com" }</text>
+  </g>
+  <g font-size="12" fill="#2563eb">
+    <text x="30" y="325">Top: request line (method + path + version)</text>
+    <text x="30" y="343">Middle: headers · then a blank line · Bottom: body (optional)</text>
+  </g>
+
+  <!-- arrow -->
+  <line x1="438" y1="150" x2="462" y2="150" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="462" y1="230" x2="438" y2="230" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Response -->
+  <text x="470" y="65" font-size="15" font-weight="700" fill="#14532d">Response  (server → client)</text>
+  <rect x="470" y="75" width="400" height="230" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+    <rect x="471" y="76" width="398" height="34" fill="#dcfce7"/>
+    <text x="485" y="99" fill="#14532d">HTTP/1.1 <tspan font-weight="700">201 Created</tspan></text>
+    <text x="485" y="135" fill="#334155">Content-Type: application/json</text>
+    <text x="485" y="157" fill="#334155">Location: /api/users/42</text>
+    <text x="485" y="179" fill="#334155">Cache-Control: no-store</text>
+    <text x="485" y="201" fill="#334155">Set-Cookie: sid=abc; HttpOnly</text>
+    <line x1="485" y1="215" x2="855" y2="215" stroke="#cbd5e1" stroke-dasharray="4 3"/>
+    <text x="485" y="243" fill="#0f172a">{ "id": 42,</text>
+    <text x="485" y="265" fill="#0f172a">  "name": "Ada" }</text>
+  </g>
+  <g font-size="12" fill="#16a34a">
+    <text x="470" y="325">Top: status line (version + status code + reason)</text>
+    <text x="470" y="343">Middle: headers · then a blank line · Bottom: body (HTML, JSON…)</text>
+  </g>
+  <text x="450" y="370" text-anchor="middle" font-size="12" fill="#64748b">HTTP/2 and HTTP/3 send the same information in binary frames — the concepts are identical.</text>
+</svg>

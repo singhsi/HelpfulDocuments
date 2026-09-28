@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">The same question, "get user 42", in four styles</text>
+
+  <!-- REST -->
+  <rect x="20" y="50" width="420" height="235" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <rect x="21" y="51" width="418" height="32" rx="9" fill="#dbeafe"/>
+  <text x="36" y="73" font-size="15" font-weight="700" fill="#1e3a8a">REST</text>
+  <text x="424" y="73" text-anchor="end" font-size="12" fill="#1e40af">URL = the thing, method = the action</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#0f172a">
+    <text x="36" y="110">GET /users/42</text>
+    <text x="36" y="130" fill="#64748b">Accept: application/json</text>
+    <text x="36" y="165" fill="#15803d">200 OK</text>
+    <text x="36" y="185">{ "id": 42,</text>
+    <text x="51.6" y="205">"name": "Ada",</text>
+    <text x="51.6" y="225">"email": "ada@example.com",</text>
+    <text x="51.6" y="245">"createdAt": "2026-09-27T10:15:30Z" }</text>
+  </g>
+  <text x="36" y="273" font-size="12" fill="#64748b">Server decides the shape; you get every field.</text>
+
+  <!-- SOAP -->
+  <rect x="460" y="50" width="420" height="235" rx="10" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="461" y="51" width="418" height="32" rx="9" fill="#ede9fe"/>
+  <text x="476" y="73" font-size="15" font-weight="700" fill="#4c1d95">SOAP</text>
+  <text x="864" y="73" text-anchor="end" font-size="12" fill="#5b21b6">everything is an XML envelope</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#0f172a">
+    <text x="476" y="110">POST /UserService</text>
+    <text x="476" y="130" fill="#64748b">Content-Type: text/xml</text>
+    <text x="476" y="160">&lt;soap:Envelope xmlns:soap="…"&gt;</text>
+    <text x="491.6" y="180">&lt;soap:Body&gt;</text>
+    <text x="507.2" y="200">&lt;GetUser&gt;</text>
+    <text x="522.8" y="220">&lt;id&gt;42&lt;/id&gt;</text>
+    <text x="507.2" y="240">&lt;/GetUser&gt;</text>
+    <text x="491.6" y="260">&lt;/soap:Body&gt; &lt;/soap:Envelope&gt;</text>
+  </g>
+
+  <!-- GraphQL -->
+  <rect x="20" y="305" width="420" height="235" rx="10" fill="#f8fafc" stroke="#db2777" stroke-width="2"/>
+  <rect x="21" y="306" width="418" height="32" rx="9" fill="#fce7f3"/>
+  <text x="36" y="328" font-size="15" font-weight="700" fill="#831843">GraphQL</text>
+  <text x="424" y="328" text-anchor="end" font-size="12" fill="#9d174d">client asks for exactly the fields it needs</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#0f172a">
+    <text x="36" y="365">POST /graphql</text>
+    <text x="36" y="390">query {</text>
+    <text x="51.6" y="410">user(id: 42) { name }</text>
+    <text x="36" y="430">}</text>
+    <text x="36" y="465" fill="#15803d">200 OK</text>
+    <text x="36" y="485">{ "data": { "user": { "name": "Ada" } } }</text>
+  </g>
+  <text x="36" y="525" font-size="12" fill="#64748b">One endpoint; only "name" comes back.</text>
+
+  <!-- gRPC -->
+  <rect x="460" y="305" width="420" height="235" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <rect x="461" y="306" width="418" height="32" rx="9" fill="#dcfce7"/>
+  <text x="476" y="328" font-size="15" font-weight="700" fill="#14532d">gRPC</text>
+  <text x="864" y="328" text-anchor="end" font-size="12" fill="#166534">call a function defined in a .proto file</text>
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#0f172a">
+    <text x="476" y="365" fill="#64748b">// user.proto (the contract)</text>
+    <text x="476" y="385">service UserService {</text>
+    <text x="491.6" y="405">rpc GetUser (GetUserRequest)</text>
+    <text x="522.8" y="425">returns (User);</text>
+    <text x="476" y="445">}</text>
+    <text x="476" y="480" fill="#64748b">// generated client code</text>
+    <text x="476" y="500">User u = stub.getUser(req);</text>
+  </g>
+  <text x="476" y="525" font-size="12" fill="#64748b">Sent as compact binary over HTTP/2, not readable text.</text>
+</svg>

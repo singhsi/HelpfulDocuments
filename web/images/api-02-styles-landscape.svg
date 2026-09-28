@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="440" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">The web API landscape: three families</text>
+
+  <!-- Column 1 -->
+  <rect x="20" y="50" width="280" height="370" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">Request / response</text>
+  <text x="160" y="97" text-anchor="middle" font-size="12" fill="#1e40af">client asks, server answers</text>
+  <g font-size="12">
+    <rect x="36" y="112" width="248" height="66" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="50" y="134" font-size="14" font-weight="700" fill="#0f172a">REST</text>
+    <text x="50" y="153" fill="#334155">resources + HTTP methods + JSON</text>
+    <text x="50" y="169" fill="#64748b">the default for most web APIs</text>
+
+    <rect x="36" y="186" width="248" height="66" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="50" y="208" font-size="14" font-weight="700" fill="#0f172a">SOAP</text>
+    <text x="50" y="227" fill="#334155">XML envelopes + WSDL contract</text>
+    <text x="50" y="243" fill="#64748b">enterprise, banking, legacy</text>
+
+    <rect x="36" y="260" width="248" height="66" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="50" y="282" font-size="14" font-weight="700" fill="#0f172a">GraphQL</text>
+    <text x="50" y="301" fill="#334155">one endpoint, client picks fields</text>
+    <text x="50" y="317" fill="#64748b">rich UIs, many data sources</text>
+
+    <rect x="36" y="334" width="248" height="66" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="50" y="356" font-size="14" font-weight="700" fill="#0f172a">gRPC</text>
+    <text x="50" y="375" fill="#334155">call remote functions, binary Protobuf</text>
+    <text x="50" y="391" fill="#64748b">fast internal service-to-service</text>
+  </g>
+
+  <!-- Column 2 -->
+  <rect x="310" y="50" width="280" height="370" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#14532d">Real-time / push</text>
+  <text x="450" y="97" text-anchor="middle" font-size="12" fill="#166534">server sends when something happens</text>
+  <g font-size="12">
+    <rect x="326" y="112" width="248" height="66" rx="8" fill="#ffffff" stroke="#86efac"/>
+    <text x="340" y="134" font-size="14" font-weight="700" fill="#0f172a">WebSockets</text>
+    <text x="340" y="153" fill="#334155">always-open, two-way connection</text>
+    <text x="340" y="169" fill="#64748b">chat, games, live collaboration</text>
+
+    <rect x="326" y="186" width="248" height="66" rx="8" fill="#ffffff" stroke="#86efac"/>
+    <text x="340" y="208" font-size="14" font-weight="700" fill="#0f172a">Server-Sent Events (SSE)</text>
+    <text x="340" y="227" fill="#334155">one-way stream, server → browser</text>
+    <text x="340" y="243" fill="#64748b">live feeds, progress, AI token streams</text>
+
+    <rect x="326" y="260" width="248" height="66" rx="8" fill="#ffffff" stroke="#86efac"/>
+    <text x="340" y="282" font-size="14" font-weight="700" fill="#0f172a">Webhooks</text>
+    <text x="340" y="301" fill="#334155">provider calls <tspan font-style="italic">your</tspan> URL on an event</text>
+    <text x="340" y="317" fill="#64748b">payments, Git pushes, integrations</text>
+  </g>
+
+  <!-- Column 3 -->
+  <rect x="600" y="50" width="280" height="370" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="740" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">Asynchronous messaging</text>
+  <text x="740" y="97" text-anchor="middle" font-size="12" fill="#92400e">send now, processed later, via a broker</text>
+  <g font-size="12">
+    <rect x="616" y="112" width="248" height="66" rx="8" fill="#ffffff" stroke="#fcd34d"/>
+    <text x="630" y="134" font-size="14" font-weight="700" fill="#0f172a">Message queues</text>
+    <text x="630" y="153" fill="#334155">one message → one worker</text>
+    <text x="630" y="169" fill="#64748b">RabbitMQ, Amazon SQS, JMS</text>
+
+    <rect x="616" y="186" width="248" height="66" rx="8" fill="#ffffff" stroke="#fcd34d"/>
+    <text x="630" y="208" font-size="14" font-weight="700" fill="#0f172a">Event streams / pub-sub</text>
+    <text x="630" y="227" fill="#334155">one event → many subscribers</text>
+    <text x="630" y="243" fill="#64748b">Apache Kafka, Google Pub/Sub, SNS</text>
+  </g>
+  <g font-size="12" fill="#92400e">
+    <text x="616" y="290">Good when the caller doesn't need</text>
+    <text x="616" y="307">the answer right away, and when</text>
+    <text x="616" y="324">services should keep working even</text>
+    <text x="616" y="341">if the other side is down.</text>
+  </g>
+</svg>

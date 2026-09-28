@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Inside a REST API (Spring Boot example)</text>
+
+  <!-- Boxes -->
+  <rect x="20"  y="80" width="120" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="80"  y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">Client</text>
+  <text x="80"  y="136" text-anchor="middle" font-size="11" fill="#1e3a8a">JSON in / out</text>
+
+  <rect x="185" y="80" width="160" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="265" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Controller</text>
+  <text x="265" y="126" text-anchor="middle" font-size="11" fill="#14532d">@RestController</text>
+  <text x="265" y="143" text-anchor="middle" font-size="11" fill="#14532d">@Valid request DTO</text>
+
+  <rect x="390" y="80" width="160" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="470" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Service</text>
+  <text x="470" y="126" text-anchor="middle" font-size="11" fill="#14532d">business rules</text>
+  <text x="470" y="143" text-anchor="middle" font-size="11" fill="#14532d">@Transactional</text>
+
+  <rect x="595" y="80" width="150" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Repository</text>
+  <text x="670" y="126" text-anchor="middle" font-size="11" fill="#14532d">Spring Data JPA</text>
+  <text x="670" y="143" text-anchor="middle" font-size="11" fill="#14532d">entities</text>
+
+  <rect x="790" y="80" width="95" height="80" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="837" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">DB</text>
+
+  <!-- forward arrows -->
+  <line x1="142" y1="105" x2="181" y2="105" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="347" y1="105" x2="386" y2="105" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="552" y1="105" x2="591" y2="105" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="747" y1="105" x2="786" y2="105" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- return arrows -->
+  <line x1="786" y1="140" x2="747" y2="140" stroke="#334155" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <line x1="591" y1="140" x2="552" y2="140" stroke="#334155" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <line x1="386" y1="140" x2="347" y2="140" stroke="#334155" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <line x1="181" y1="140" x2="142" y2="140" stroke="#334155" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+
+  <!-- what travels -->
+  <g font-size="11" fill="#475569" text-anchor="middle">
+    <text x="265" y="185">HTTP ⇄ DTOs</text>
+    <text x="470" y="185">DTOs ⇄ entities</text>
+    <text x="670" y="185">entities ⇄ SQL</text>
+  </g>
+
+  <!-- Exception handler -->
+  <rect x="185" y="230" width="520" height="60" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="445" y="255" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">Global exception handler  (@RestControllerAdvice)</text>
+  <text x="445" y="276" text-anchor="middle" font-size="12" fill="#7f1d1d">NotFound → 404 · validation → 400 · conflict → 409 · anything else → 500</text>
+  <path d="M470,162 V226" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrowRed)"/>
+  <path d="M265,162 V226" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrowRed)"/>
+  <path d="M185,260 H80 V164" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="90" y="215" font-size="11" fill="#b91c1c">error JSON</text>
+
+  <text x="450" y="322" text-anchor="middle" font-size="12" fill="#64748b">Thin controllers, logic in services, persistence in repositories. Never return JPA entities directly — map them to DTOs.</text>
+</svg>

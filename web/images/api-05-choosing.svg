@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="900" height="580" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Which API style should I use?</text>
+  <text x="450" y="50" text-anchor="middle" font-size="12" fill="#64748b">Answer top to bottom. Stop at the first "yes".</text>
+
+  <!-- Questions column -->
+  <g font-size="14" fill="#0f172a">
+    <rect x="30" y="70"  width="500" height="54" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <text x="48" y="93">Do you have to integrate with an existing</text>
+    <text x="48" y="113">SOAP / WSDL service?</text>
+
+    <rect x="30" y="160" width="500" height="54" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <text x="48" y="183">Does the server need to push updates the</text>
+    <text x="48" y="203">moment something happens?</text>
+
+    <rect x="30" y="290" width="500" height="54" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <text x="48" y="313">Can the caller carry on without the result right away</text>
+    <text x="48" y="333">(background jobs, fan-out to many services)?</text>
+
+    <rect x="30" y="380" width="500" height="54" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <text x="48" y="403">Internal service-to-service calls where speed and</text>
+    <text x="48" y="423">strict typing matter most?</text>
+
+    <rect x="30" y="470" width="500" height="54" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <text x="48" y="493">Many different clients (web, mobile…) each need</text>
+    <text x="48" y="513">different data shapes from many sources?</text>
+  </g>
+
+  <!-- "no" arrows down -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="120" y1="126" x2="120" y2="156" marker-end="url(#arrow)"/>
+    <line x1="120" y1="216" x2="120" y2="286" marker-end="url(#arrow)"/>
+    <line x1="120" y1="346" x2="120" y2="376" marker-end="url(#arrow)"/>
+    <line x1="120" y1="436" x2="120" y2="466" marker-end="url(#arrow)"/>
+    <line x1="120" y1="526" x2="120" y2="546" marker-end="url(#arrow)"/>
+  </g>
+  <g font-size="12" fill="#b91c1c" font-weight="700">
+    <text x="128" y="146">no</text>
+    <text x="128" y="256">no</text>
+    <text x="128" y="366">no</text>
+    <text x="128" y="456">no</text>
+    <text x="128" y="542">no</text>
+  </g>
+
+  <!-- "yes" arrows right -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="532" y1="97"  x2="606" y2="97"  marker-end="url(#arrow)"/>
+    <line x1="532" y1="187" x2="606" y2="187" marker-end="url(#arrow)"/>
+    <line x1="532" y1="317" x2="606" y2="317" marker-end="url(#arrow)"/>
+    <line x1="532" y1="407" x2="606" y2="407" marker-end="url(#arrow)"/>
+    <line x1="532" y1="497" x2="606" y2="497" marker-end="url(#arrow)"/>
+  </g>
+  <g font-size="12" fill="#15803d" font-weight="700" text-anchor="middle">
+    <text x="569" y="90">yes</text>
+    <text x="569" y="180">yes</text>
+    <text x="569" y="310">yes</text>
+    <text x="569" y="400">yes</text>
+    <text x="569" y="490">yes</text>
+  </g>
+
+  <!-- Answers -->
+  <rect x="610" y="75" width="260" height="44" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="740" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#4c1d95">SOAP</text>
+
+  <rect x="610" y="140" width="260" height="130" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <g font-size="13" fill="#14532d">
+    <text x="626" y="165" font-weight="700">Two-way, low latency</text>
+    <text x="626" y="182">→ <tspan font-weight="700">WebSockets</tspan></text>
+    <text x="626" y="206" font-weight="700">One-way to a browser</text>
+    <text x="626" y="223">→ <tspan font-weight="700">Server-Sent Events</tspan></text>
+    <text x="626" y="247" font-weight="700">Notify another server</text>
+    <text x="626" y="264">→ <tspan font-weight="700">Webhooks</tspan></text>
+  </g>
+
+  <rect x="610" y="295" width="260" height="44" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="740" y="323" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">Message queue / events</text>
+
+  <rect x="610" y="385" width="260" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="740" y="413" text-anchor="middle" font-size="15" font-weight="700" fill="#14532d">gRPC</text>
+
+  <rect x="610" y="475" width="260" height="44" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="740" y="503" text-anchor="middle" font-size="15" font-weight="700" fill="#831843">GraphQL</text>
+
+  <!-- Default -->
+  <rect x="30" y="548" width="500" height="28" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="280" y="567" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">REST: the sensible default</text>
+</svg>

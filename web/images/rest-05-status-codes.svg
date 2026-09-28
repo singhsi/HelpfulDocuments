@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Picking the right status code</text>
+
+  <!-- 2xx -->
+  <rect x="20" y="50" width="270" height="300" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="155" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">2xx — It worked</text>
+  <g font-size="13">
+    <text x="38" y="112" font-weight="700" fill="#14532d">200 OK</text>
+    <text x="38" y="130" fill="#334155">GET, PUT/PATCH returning data</text>
+    <text x="38" y="164" font-weight="700" fill="#14532d">201 Created</text>
+    <text x="38" y="182" fill="#334155">POST made something new;</text>
+    <text x="38" y="198" fill="#334155">add a Location header</text>
+    <text x="38" y="232" font-weight="700" fill="#14532d">202 Accepted</text>
+    <text x="38" y="250" fill="#334155">queued for async processing</text>
+    <text x="38" y="284" font-weight="700" fill="#14532d">204 No Content</text>
+    <text x="38" y="302" fill="#334155">success, empty body (DELETE)</text>
+  </g>
+
+  <!-- 4xx -->
+  <rect x="315" y="50" width="270" height="300" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">4xx — Client's mistake</text>
+  <g font-size="13">
+    <text x="333" y="110" font-weight="700" fill="#78350f">400 Bad Request</text>
+    <text x="333" y="127" fill="#334155">malformed JSON, failed validation</text>
+    <text x="333" y="152" font-weight="700" fill="#78350f">401 Unauthorized</text>
+    <text x="333" y="169" fill="#334155">who are you? (no/invalid token)</text>
+    <text x="333" y="194" font-weight="700" fill="#78350f">403 Forbidden</text>
+    <text x="333" y="211" fill="#334155">I know you, but you can't do this</text>
+    <text x="333" y="236" font-weight="700" fill="#78350f">404 Not Found</text>
+    <text x="333" y="253" fill="#334155">no such resource</text>
+    <text x="333" y="278" font-weight="700" fill="#78350f">409 Conflict</text>
+    <text x="333" y="295" fill="#334155">duplicate, or state clash</text>
+    <text x="333" y="320" font-weight="700" fill="#78350f">429 Too Many Requests</text>
+    <text x="333" y="337" fill="#334155">rate limit hit, retry later</text>
+  </g>
+
+  <!-- 5xx -->
+  <rect x="610" y="50" width="270" height="300" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="745" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#7f1d1d">5xx — Server's fault</text>
+  <g font-size="13">
+    <text x="628" y="112" font-weight="700" fill="#7f1d1d">500 Internal Server Error</text>
+    <text x="628" y="130" fill="#334155">unhandled exception, a bug</text>
+    <text x="628" y="164" font-weight="700" fill="#7f1d1d">502 Bad Gateway</text>
+    <text x="628" y="182" fill="#334155">proxy got a bad reply upstream</text>
+    <text x="628" y="216" font-weight="700" fill="#7f1d1d">503 Service Unavailable</text>
+    <text x="628" y="234" fill="#334155">overloaded or in maintenance</text>
+    <text x="628" y="268" font-weight="700" fill="#7f1d1d">504 Gateway Timeout</text>
+    <text x="628" y="286" fill="#334155">upstream too slow</text>
+    <text x="628" y="326" fill="#991b1b" font-style="italic">Never leak stack traces here</text>
+  </g>
+
+  <text x="450" y="372" text-anchor="middle" font-size="12" fill="#64748b">Client can fix a 4xx by changing the request. A 5xx means the same request might work later.</text>
+</svg>
