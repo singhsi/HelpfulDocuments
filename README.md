@@ -18,13 +18,13 @@ Git version control — concepts, workflows, and commands.
 
 ---
 
-### [`podman/`](podman/)
-Container basics with Podman (compatible with Docker).
+### [`containers/`](containers/)
+Building, running, and orchestrating containers.
 
-| File | Description |
+| Subfolder | Description |
 |---|---|
-| [README.md](podman/README.md) | What containers are, Podman vs Docker, key concepts, writing Dockerfiles, best practices |
-| [commands.md](podman/commands.md) | Quick-lookup reference for common Podman commands |
+| [`containers/podman/`](containers/podman/) | Container basics with Podman (compatible with Docker) — concepts, Dockerfiles, and commands |
+| [`containers/kubernetes/`](containers/kubernetes/) | Kubernetes core objects, first deployment, config/secrets, health checks, and `kubectl` commands |
 
 ---
 
@@ -36,6 +36,7 @@ Java application servers, servlet containers, and middleware.
 | [`java/java-se/`](java/java-se/) | Java SE core execution model, CLI binaries (`java`, `javac`, `javaw`, `jar`, `javap`), and classpath management |
 | [`java/jboss/`](java/jboss/) | JBoss EAP & WildFly installation, multi-monolith standalone setup, IDE configuration, and performance tuning |
 | [`java/liberty/`](java/liberty/) | WebSphere Liberty & Open Liberty guide, production containerization, and commands |
+| [`java/spring/`](java/spring/) | Spring Boot fundamentals (DI, REST, config, JPA, testing) and Thymeleaf template basics |
 | [`java/tomcat/`](java/tomcat/) | Apache Tomcat developer guide, Linux installation, Dev/Test/Prod environments, and commands |
 
 ---

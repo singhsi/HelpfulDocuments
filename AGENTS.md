@@ -8,7 +8,7 @@
 
 ## Structure
 
-- One top-level folder per topic (`git/`, `java/`, `podman/`, `web/`); nested subfolders for subtopics (e.g. `java/build/maven/`).
+- One top-level folder per topic (`containers/`, `git/`, `java/`, `web/`); nested subfolders for subtopics (e.g. `java/build/maven/`, `containers/kubernetes/`).
 - Each topic folder typically has `README.md` (beginner-friendly guide) and `commands.md` (quick-lookup commands).
 - Extra focused files sit alongside them (e.g. `git/stash.md`, `java/java-se/performance.md`, `web/rest_api.md`).
 - Folder `README.md` files contain a Contents table linking every file in that folder.
