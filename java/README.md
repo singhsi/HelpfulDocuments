@@ -6,6 +6,12 @@ Guides and references for core Java Standard Edition (Java SE), enterprise Java 
 
 ## Contents
 
+| File | Description |
+|---|---|
+| [naming-conventions.md](naming-conventions.md) | Naming objects by role (Entity, DTO, Request/Response, Form, Repository/DAO, Model, Event/Command, Mapper), when to use each, and which package they belong in |
+
+---
+
 ### [`java/java-se/`](java-se/)
 Java Standard Edition (Java SE) fundamentals, CLI tools, and runtime execution from first principles without IDEs or build tools.
 
@@ -35,6 +41,17 @@ WebSphere Liberty and Open Liberty application servers.
 | [README.md](liberty/README.md) | What Liberty is, WAS vs Liberty, `server.xml`, running in containers, best practices, migration guide |
 | [containerization.md](liberty/containerization.md) | Production-grade containerization with Docker/Podman, `configure.sh`, JVM tuning, and Kubernetes/OpenShift deployment |
 | [commands.md](liberty/commands.md) | Quick-lookup reference for Liberty server commands and useful links |
+
+---
+
+### [`java/spring/`](spring/)
+Spring Boot applications and Thymeleaf server-side templates.
+
+| File | Description |
+|---|---|
+| [README.md](spring/README.md) | Folder overview and contents |
+| [springboot.md](spring/springboot.md) | Spring Boot in simple terms: starters, auto-configuration, DI, REST APIs, validation, config/profiles, JPA, logging, Actuator, testing, and packaging |
+| [thymeleaf.md](spring/thymeleaf.md) | Thymeleaf basics: expressions, loops/conditions, links, forms with validation, fragments, and security notes |
 
 ---
 
