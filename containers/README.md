@@ -1,10 +1,20 @@
 # Containers
 
-Guides for building, running, and orchestrating containers. **Podman** builds and runs containers on one machine; **Kubernetes** runs and manages many containers across a cluster of machines.
+Guides for building, running, and orchestrating containers. **Docker** and **Podman** build and run containers on one machine; **Kubernetes** runs and manages many containers across a cluster of machines.
 
 ---
 
 ## Contents
+
+### [`containers/docker/`](docker/)
+Container basics with Docker.
+
+| File | Description |
+|---|---|
+| [README.md](docker/README.md) | What containers and Docker are, key concepts (images, containers, Docker Hub), and workflow |
+| [commands.md](docker/commands.md) | Quick-lookup reference for common Docker commands |
+
+---
 
 ### [`containers/podman/`](podman/)
 Container basics with Podman (compatible with Docker).

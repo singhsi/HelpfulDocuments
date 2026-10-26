@@ -23,6 +23,7 @@ Building, running, and orchestrating containers.
 
 | Subfolder | Description |
 |---|---|
+| [`containers/docker/`](containers/docker/) | Container basics with Docker — concepts, images, Docker Hub, and CLI commands |
 | [`containers/podman/`](containers/podman/) | Container basics with Podman (compatible with Docker) — concepts, Dockerfiles, and commands |
 | [`containers/kubernetes/`](containers/kubernetes/) | Kubernetes core objects, first deployment, config/secrets, health checks, and `kubectl` commands |
 
